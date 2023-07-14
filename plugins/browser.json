@@ -1,0 +1,42 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.organiser.www"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.organiser.www"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.organiser.www"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.organiser.www"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.organiser.www"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "com.organiser.www"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.organiser.www"
+    },
+    "com.telerik.plugins.nativepagetransitions": {
+      "PACKAGE_NAME": "com.organiser.www"
+    },
+    "cordova-plugin-x-toast": {
+      "PACKAGE_NAME": "com.organiser.www"
+    },
+    "cordova-plugin-native-spinner": {
+      "PACKAGE_NAME": "com.organiser.www"
+    }
+  },
+  "dependent_plugins": {}
+}

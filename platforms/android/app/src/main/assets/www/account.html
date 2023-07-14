@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.4.5.min.css"/>
+        <link rel="stylesheet" href="jquery.mobile/jquery.mobile.icons-1.4.5.min.css"/>
+
+        <link href="js/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet"/>
+        <link href="js/jquery-ui-1.12.1/jquery-ui.theme.min.css" rel="stylesheet"/>
+
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="jquery.mobile/jquery.mobile-1.4.5.js"></script>
+
+        <!--<script src="js/jquery.ui.touch-punch.min.js"></script>-->
+        <script src="js/functions.js"></script>
+        <script src="js/constants.js"></script>
+
+
+        <title>Stuffy Locator</title>
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css" />
+        <link href="css/home.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div data-role="page" id="page1">
+
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
+                <h1>Profile</h1>
+                <!--<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left ui-icon-gear">Button</a>-->
+                <a href="#panel-overlay" class="ui-btn-left ui-btn ui-btn-inline ui-shadow ui-corner-all ui-mini ui-icon-bars ui-btn-icon-notext">Overlay</a>
+                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left ui-btn-icon-notext">Back</a>
+            </div><!-- /header -->
+
+            <div class="ui-content" role="main">
+                <form id="signupfrm" method="post">
+                    <input type="hidden" name="txt_device_id" id="device_id"  value="">
+                    <label for="txt_first_name">First Name</label>
+                    <input type="text" name="txt_first_name" id="txt_first_name" class="required" value="">
+                    <label for="txt_last_name">Last Name</label>
+                    <input type="text" name="txt_last_name" id="txt_last_name" value="">
+                    <label for="txt_email">Email Address</label>
+                    <input type="email" name="txt_email" id="txt_email" value="" class="required email">
+                    <!-- <label for="txt_password">Password</label>
+                    <input type="password" name="txt_password" id="txt_password" value=""> -->
+
+                    <a href="#dlg-sign-up-sent" data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit-signup" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Submit</a>
+                </form>
+
+            </div><!-- /content -->
+
+            <!--            <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+                        </div>-->
+            <div data-role="panel" id="panel-overlay" class="main_menu" data-display="overlay">
+
+            </div>
+
+
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>        
+        <script type="text/javascript" src="materialize/js/materialize.min.js"></script>        
+
+        <script type="text/javascript" src="js/account.js"></script>
+        <script src="js/layout.js"></script>
+    </body>
+
+</html>

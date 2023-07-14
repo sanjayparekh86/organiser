@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.4.5.min.css"/>
+        <link rel="stylesheet" href="jquery.mobile/jquery.mobile.icons-1.4.5.min.css"/>
+
+        <link href="js/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet"/>
+        <link href="js/jquery-ui-1.12.1/jquery-ui.theme.min.css" rel="stylesheet"/>
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="jquery.mobile/jquery.mobile-1.4.5.js"></script>
+
+        <!--<script src="js/jquery.ui.touch-punch.min.js"></script>-->
+        <script src="js/functions.js"></script>
+        <script src="js/constants.js"></script>
+        <title>Credits</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" />
+    </head>
+
+    <body>
+        <div data-role="page" id="credits">
+            <div class="ui-panel-wrapper">
+                <div data-role="header" data-position="fixed" data-tap-toggle="false">
+                    <h1>Credits</h1>
+                    <!--<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left ui-icon-gear">Button</a>-->
+                    <a href="#panel-overlay" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-mini">Overlay</a>
+                    <!--                <a href="#panel-reveal" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-mini">Reveal</a>
+                                        
+                                        <a href="#panel-push" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-mini">Push</a>-->
+                    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left ui-btn-icon-notext">Back</a>
+
+                </div><!-- /header -->
+
+                <div class="ui-content" role="main">
+
+                    <div id="ui-body-test" class="ui-body1 ui-body-a ui-corner-all" style="margin-bottom:1em;">
+                        <ul data-role="listview">
+                            <li><a href="https://iconscout.com/icons/camera" target="_blank">Camera Icon</a> by <a href="https://iconscout.com/contributors/giulio-smedile">Giulio Smedile</a> on <a href="https://iconscout.com">Iconscout</a></li>
+                            <li><a href="https://iconscout.com/icons/gallery" target="_blank">Gallery Icon</a> by <a href="https://iconscout.com/contributors/avinash-p" target="_blank">Avinash P</a>></li>
+                            <li><a href="https://iconscout.com/icons/unlock" target="_blank">Unlock Icon</a> by <a href="https://iconscout.com/contributors/benjamin-j-sperry">Benjamin J Sperry</a> on <a href="https://iconscout.com">Iconscout</a></li>
+
+                        </ul>
+                    </div>
+                </div><!-- /content -->
+
+
+            </div>
+            <div data-role="panel" class="main_menu" id="panel-overlay" data-display="overlay">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+                    <li><a href="#">List item</a></li>
+                    <li><a href="#">List item</a></li>
+                    <li><a href="#">List item</a></li>
+                </ul>
+                <br><br>
+                <button class="ui-btn ui-corner-all ui-shadow">Button</button>
+            </div>
+
+
+
+            <!--            <div data-role="popup" id="popupForm" class="ui-content" data-theme="a" data-overlay-theme="b" data-transition="slidedown"  data-position-to="window">
+                            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+                               
+                        </div>-->
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>         
+        <script type="text/javascript" src="materialize/js/materialize.min.js"></script>  
+        <script type="text/javascript" src="js/layout.js"></script>        
+
+
+    </body>
+
+</html>

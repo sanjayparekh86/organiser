@@ -1,0 +1,59 @@
+/* Change html headers color */
+h1,h2,h3,h4,h5 {
+    color:#0071bc;
+}
+h2.mc-text-danger,
+h3.mc-text-danger  {
+    color:red;
+}
+/* Change border radius of icon buttons */
+.ui-btn-icon-notext.ui-corner-all {
+    -webkit-border-radius: .3125em;
+    border-radius: .3125em;
+}
+/* Change color of jQuery Mobile page headers */
+.ui-title {
+    color:#fff;
+}
+/* Center-aligned text */
+.mc-text-center {
+    text-align:center;
+}
+/* Top margin for some elements */
+.mc-top-margin-1-5 {
+    margin-top:1.5em;
+}
+
+label.text-error {
+    position: absolute;
+    right: 0px;
+    top: -20px;
+    width: auto;
+    height: auto;
+    margin: 0;
+    font-size: 10px!important;
+    line-height: 11px!important;
+    background: #fb0101;
+    padding: 5px 5px 4px!important;
+    color: #fff;
+    text-transform: none;
+    -webkit-font-smoothing: auto;
+    font-family: arial;
+    font-weight: 400;
+    -webkit-font-smoothing: auto;
+}
+label.text-error:after {
+    border-color: #fb0101 transparent transparent;
+    border-image: none;
+    border-right: 6px solid transparent;
+    border-style: solid;
+    border-width: 6px;
+    content: " ";
+    height: 0;
+    left: 20px;
+    margin-left: -10px;
+    position: absolute;
+    top: 100%;
+    width: 0;
+}
+.ui-input-text{position: relative!important;}

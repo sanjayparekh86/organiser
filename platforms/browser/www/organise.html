@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css" />
+        <link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="jquery.mobile/jquery.mobile.icons-1.4.5.min.css">
+
+        <link href="js/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet">
+        <link href="js/jquery-ui-1.12.1/jquery-ui.theme.min.css" rel="stylesheet">
+        <link href="css/organise.css" rel="stylesheet">
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="jquery.mobile/jquery.mobile-1.4.5.js"></script>
+
+        <script src="js/jquery.ui.touch-punch.min.js"></script>
+        <script src="js/functions.js"></script>
+        <script src="js/constants.js"></script>
+
+        <title>Easy Organiser</title>
+    </head>
+
+    <body>
+        <div data-role="page" id="page1">
+
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
+                <h1>Stuffy Finder</h1>
+                <!--<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left ui-icon-gear">Button</a>-->
+                <a href="#panel-overlay" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-mini">Overlay</a>
+                <!--                <a href="#panel-reveal" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-mini">Reveal</a>
+                                    
+                                    <a href="#panel-push" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-mini">Push</a>-->
+                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left ui-btn-icon-notext">Back</a>
+
+            </div><!-- /header -->
+
+            <div class="ui-content" role="main">
+
+                <!--                <div class="ui-field-contain22">                       
+                                    <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ">
+                                        <input type="text" name="name2" id="container_name" value="" data-enhanced="true" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow">
+                                    </div>
+                                </div>-->
+                <div class="row">
+                    <div class="col s5 no-padding">
+                        <div class="ui-field-contain1">
+
+                            <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ">
+                                <input type="text" name="base_name" id="base_name" data-enhanced="true" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow" placeholder="Base Name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s7 no-padding">
+
+                        <a id="add_image" href="javascript:;"  class="icon-preview col s4 m3"><i class="material-icons dp48 small">camera_alt</i><span>Base</span></a>
+                        <a class="icon-preview col s4 m3" id="add_box"><i class="material-icons dp48 small">add_box</i><span>Box</span></a>
+                        <a class="icon-preview col s4 m3" id="move_base" style="display:none"><i class="material-icons dp48 small">zoom_out_map</i><span>Zoom</span></a>
+                        <a class="icon-preview col s4 m3" id="save" style="display:none"><i class="material-icons dp48 small">save</i><span>Save</span></a>
+
+                    </div>
+                </div>
+                <!--                <div class="ui-field-contain">
+                
+                                    <div class="ui-btn ui-input-btn ui-corner-all ui-shadow">
+                                    <a href="#choose_image" data-transition="pop" class="ui-btn ui-icon-plus ui-btn-icon-left ui-shadow ui-corner-all ui-btn ui-icon-plus ui-btn-icon-left ui-shadow ui-corner-all ui-mini ui-btn-inline" data-rel="popup" data-position-to="window">Add Image</a>
+                                    </div>
+                                </div>-->
+
+
+                <div id="ui-body-test" class="ui-body1 ui-body-a ui-corner-all" style="margin-bottom:1em;">
+                    <div id="panzoom-parent" class="panzoom-parent ui-bar-a ui-corner-all">
+                        <div id="panzoom" class="panzoom">
+                            <img src="" class="" id="uploaded_image"  />
+                            <!--img/Tulips.jpg-->
+                        </div>
+                    </div>
+                    <div class="row action_grid">
+                        <!--                        <div class="col s4"><a href="javascript:;" class="lock_container ui-btn ui-shadow ui-corner-all ui-icon-unlock ui-btn-a ui-btn-inline ui-state-disabled ui-btn-icon-left ui-mini" >Lock</a></div>
+                                                <div class="col s4"><a href="javascript:;" class="edit_container ui-btn ui-shadow ui-corner-all ui-icon-bullets ui-btn-icon-notext1 ui-btn-b ui-btn-inline ui-state-disabled ui-btn-icon-left ui-mini">edit</a>   </div>
+                                                <div class="col s4"><a href="javascript:;" class="delete_container ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext1 ui-btn-b ui-btn-inline delete-icon ui-state-disabled ui-btn-icon-left ui-mini">Delete</a></div>-->
+
+
+                        <a href="javascript:;" class="lock_container icon-preview col s4 white-text blue-grey darken-1" ><i class="material-icons dp48 small">lock_open</i><span>Lock Box</span></a>
+                        <a href="javascript:;" class="edit_container icon-preview col s4 black-text darken-4 "><i class="material-icons dp48 small">remove_red_eye</i><span>Box Items</span></a>
+                        <a href="javascript:;" class="delete_container icon-preview col s4 darken-1 red white-text"><i class="material-icons dp48 small">delete_forever</i><span> Delete Box</span></a>
+                    </div>
+                    <!--                    <div class="ui-grid-b action_grid ui-bar ui-bar-a">
+                                            <div class="ui-block-a">
+                                                <a href="javascript:;" class="lock_container ui-btn ui-shadow ui-corner-all ui-icon-unlock ui-btn-a ui-btn-inline ui-state-disabled ui-btn-icon-left ui-mini" >Lock</a>
+                                            </div>
+                                            <div class="ui-block-b">                                
+                                                <a href="javascript:;" class="edit_container ui-btn ui-shadow ui-corner-all ui-icon-bullets ui-btn-icon-notext1 ui-btn-b ui-btn-inline ui-state-disabled ui-btn-icon-left ui-mini">edit</a>                                
+                                            </div>
+                                            <div class="ui-block-b">
+                                                <a href="javascript:;" class="delete_container ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext1 ui-btn-b ui-btn-inline delete-icon ui-state-disabled ui-btn-icon-left ui-mini">Delete</a>
+                                            </div>
+                    
+                                        </div>-->
+                    <div class="full-width-slider ui-bar ui-bar-a">
+                        <input type="range" name="slider2" id="slider2" value="1" min="1" max="500" step="1" data-highlight="true" data-mini="true">
+                    </div>
+                </div>
+                <div class="container_listview " style="display:none"></div>
+            </div><!-- /content -->
+
+
+
+            <div data-role="panel" id="panel-overlay" data-display="overlay">
+                <ul data-role="listview">
+                    <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+                    <li><a href="#">List item</a></li>
+                    <li><a href="#">List item</a></li>
+                    <li><a href="#">List item</a></li>
+                </ul>
+                <br><br>
+                <button class="ui-btn ui-corner-all ui-shadow">Button</button>
+            </div>
+
+            <div data-role="popup" id="choose_image" class="ui-content" data-theme="a" data-overlay-theme="b" data-transition="slidedown"  data-position-to="window">
+                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+
+                <!--                <button class="ui-btn ui-corner-all ui-shadow" id="from_camera">Take Photo</button>
+                                <button class="ui-btn ui-corner-all ui-shadow" id="from_gallery">Choose From Gallary</button>-->
+                <div class="ui-grid-a ui-responsive1">
+                    <div class="ui-block-a">
+                        <a href="javascript:;" id="from_camera" class="ui-btn ui-shadow ui-corner-all ui-icon-camera_new ui-btn-icon-top">Camera</a>
+
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="javascript:;" id="from_gallery" class="ui-btn ui-shadow ui-corner-all ui-icon-gallery  ui-btn-icon-top">Gallery</a>
+
+                    </div>
+
+                </div>
+            </div>
+            <div data-role="popup" id="popupDialog" class="ui-content" data-theme="a" data-overlay-theme="b" data-transition="slidedown"  data-position-to="window" >
+                <div role="main" class="ui-content">
+                    <h3 class="ui-title">Are you sure you want to delete this container?</h3>
+                    <p>This action cannot be undone.</p>
+                    <a href="javascript:;" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b do_delete delete-icon "  data-transition="flow" >Delete</a>
+                    <a href="javascript:;" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancel</a>
+                </div>
+            </div>
+            <button class=" ui-bar ui-bar-a ui-btn-active ui-btn-inline1 ui-corner-none ui-mini1 ui-footer-fixed slideup  ui-btn ui-shadow" id="save_organiser" style="margin-bottom: 0;padding: 11px 0px;">Save</button>
+            <!--            <div data-role="popup" id="popupForm" class="ui-content" data-theme="a" data-overlay-theme="b" data-transition="slidedown"  data-position-to="window">
+                            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+                               
+                        </div>-->
+        </div>
+
+        <div data-role="page" id="containers">
+
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
+
+                <a href="#page1" data-direction="reverse" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left ui-btn-icon-notext">Back</a>
+                <h1>Add Container</h1>
+
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <!--                <h3>Container Details</h3>-->
+                <div class="ui-field-contain">
+                    <label for="name2">Name:</label>
+                    <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ">
+                        <input type="text" name="name2" id="container_name" value="" data-enhanced="true" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow">
+                    </div>
+                </div>
+                <!--                <div class="ui-field-contain">
+                                    <label for="textarea2">Description:</label>
+                                                    <textarea cols="40" rows="8" name="textarea2" id="container_desc" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow" style="height: 52px;"></textarea>
+                                </div>-->
+                <div class="ui-field-contain">                    
+                    <a id="add_item" href="javascript:;"  class="ui-btn ui-icon-plus ui-btn-icon-left ui-shadow ui-corner-all ui-btn ui-mini ui-btn-inline">Add Item</a>
+                </div>
+
+                <div class="ui-field-contain22 container_images" style="display: none">
+                </div>
+
+                <button class=" ui-bar ui-bar-a ui-btn-active ui-btn ui-btn-inline1 ui-shadow ui-corner-none ui-mini1 ui-footer-fixed slideup " id="add_to_master" style="margin-bottom: 0;padding: 11px 0px;">Add to container</button>
+
+            </div><!-- /content -->
+        </div>
+        <div data-role="page" id="items">
+
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
+
+                <a href="#containers" data-direction="reverse" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left ui-btn-icon-notext">Back</a>
+                <h1 id='item_header'>Add Item</h1>
+
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <!--                <h3>Container Details</h3>-->
+                <div class="ui-field-contain">
+                    <label for="name2">Item Name:</label>
+                    <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ">
+                        <input type="text" name="name2" id="item_name" value="" data-enhanced="true" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow">
+                    </div>
+                </div>
+                <div class="ui-grid-a ui-responsive1">
+                    <div class="ui-block-a">
+                        <a href="javascript:;" id="item_camera" class="ui-btn ui-shadow ui-corner-all ui-icon-camera_new ui-btn-icon-top">Camera</a>
+
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="javascript:;" id="item_gallery" class="ui-btn ui-shadow ui-corner-all ui-icon-gallery  ui-btn-icon-top">Photo Album</a>
+
+                    </div>
+
+                </div>
+                <div class="ui-grid-solo"  id="item_img_container" style="display: none">
+                    <a href="javascript:;" class="delete_item_img ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-b ui-btn-inlinea delete-icon " style="float: right;">Delete</a>
+                    <div class="ui-block-a" style="text-align: center;">
+                        <a href="javascript:;" id="img_modal" >
+                            <img class="item_img" style="width: 60%;">
+                        </a>
+                    </div>
+
+                </div>
+
+                <div data-role="popup" id="popupNYC" data-overlay-theme="b" data-theme="b" data-corners="false">
+                    <a id="popupimg11" href="javascript:;" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="item_img" style="max-height:512px;" >
+                </div>
+                <div id="item_edit_options" class="ui-grid-a ui-footer-fixed slideup" style="display: none">
+                    <div class="ui-block-a">
+                        <button class=" ui-bar ui-bar-a ui-btn-active ui-btn-inline1 ui-corner-none ui-btn ui-shadow " id="edit_item_to_container" style="margin-bottom: 0;padding: 11px 0px; font-size: 18px;">Edit Item</button>
+                    </div><div class="ui-block-b">
+                        <button class=" ui-bar ui-bar-a ui-btn-active ui-icon-delete ui-btn-icon-left ui-corner-none ui-btn ui-shadow delete-icon" id="delete_item_to_container" style="margin-bottom: 0;padding: 11px 0px;">Delete Item</button>
+                    </div>
+                </div>
+                <!--ui-icon-camera-->
+                <button class=" ui-bar ui-bar-a ui-btn-active ui-btn ui-btn-inline1 ui-shadow ui-corner-none ui-mini1 ui-footer-fixed slideup " id="add_item_to_container" style="margin-bottom: 0;padding: 11px 0px;">Add Item</button>
+
+            </div><!-- /content -->
+
+
+
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>        
+        <!--<script type="text/javascript" src="materialize/js/materialize.min.js"></script>-->    
+        <script type="text/javascript" src="js/organise.js"></script>
+
+    </body>
+
+</html>

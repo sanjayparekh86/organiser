@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="jquery.mobile/jquery.mobile.icons-1.4.5.min.css">
+
+        <link href="js/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet">
+        <link href="js/jquery-ui-1.12.1/jquery-ui.theme.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/animate.min.css">
+
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.validate.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="jquery.mobile/jquery.mobile-1.4.5.js"></script>
+        <!--
+                <script src="js/jquery.ui.touch-punch.min.js"></script>-->
+        <!--<script src="js/toast/jquery.mobile.toast.min.js"></script>-->
+
+        <script src="js/functions.js"></script>
+        <script src="js/constants.js"></script>
+
+        <title>Login</title>
+
+    </head>
+
+    <body>
+        <div data-role="page" id="page1">
+            <div class="ui-panel-wrapper">
+                <div data-role="header" data-position="fixed" data-tap-toggle="false">
+                    <h1>Photo Organiser</h1>
+                </div>
+                <div role="main" class="ui-content">
+                    <h2 class="mc-text-center">Welcome!</h2>
+                    <p class="mc-top-margin-1-5"><b>Existing Users</b></p>
+                    <a href="#sign_in" data-transition="slideup" class="ui-btn ui-btn-a ui-shadow ui-corner-all ui-btn-active">Sign In</a>
+                    <p class="mc-top-margin-1-5"><b>Don't have an account?</b></p>
+                    <a href="#sign_up" data-transition="slideup"  class="ui-btn ui-btn-a ui-shadow ui-corner-all ui-btn-active">Sign Up</a>
+                    <p class="mc-top-margin-1-5"><b>Authentication Pending?</b></p>
+                    <a href="#authentication_page" data-transition="slideup"  class="ui-btn ui-btn-a ui-shadow ui-corner-all ui-btn-active">Authenticate</a>
+                    <p></p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div data-role="page" id="sign_in">
+            <div data-role="header">
+                <h1>Sign In</h1>
+            </div><!-- /header -->
+            <div role="main" class="ui-content">
+                <!--<h3>Sign In</h3>-->
+                <form id="loginfrm" method="post">
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="email" value="">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" value="">
+
+                    <a href="javascript:;" id="btn_login" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Login</a>
+                    <p class="mc-top-margin-1-5"><a href="#begin-password-reset">Can't access your account?</a></p>
+                </form>
+            </div><!-- /content -->
+        </div><!-- /page -->
+        <div data-role="page" id="sign_up">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
+                <h1>Sign up</h1>
+            </div><!-- /header -->
+            <div role="main" class="ui-content">
+                <h3>Signup</h3>
+                <form id="signupfrm" method="post">
+                    <input type="hidden" name="txt_device_id" id="device_id"  value="">
+                    <label for="txt_first_name">First Name</label>
+                    <input type="text" name="txt_first_name" id="txt_first_name" class="required" value="">
+                    <label for="txt_last_name">Last Name</label>
+                    <input type="text" name="txt_last_name" id="txt_last_name" value="">
+                    <label for="txt_email">Email Address</label>
+                    <input type="email" name="txt_email" id="txt_email" value="" class="required email">
+                    <label for="txt_password">Password</label>
+                    <input type="password" name="txt_password" id="txt_password" value="">
+                    <label for="txt_password_confirm">Confirm Password</label>
+                    <input type="password" name="txt_password_confirm" id="txt_password_confirm" value="">
+                    <a href="#dlg-sign-up-sent" data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit-signup" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Submit</a>
+                </form>
+                <div data-role="popup" id="dlg-sign-up-sent" data-dismissible="false" style="max-width:400px;">
+                    <div data-role="header">
+                        <h1>Almost done...</h1>
+                    </div>
+                    <div role="main" class="ui-content">
+                        <h3>Confirm Your Email Address</h3>
+                        <p>We sent you an email with instructions on how to confirm your email address. Please check your inbox and follow the instructions in the email.</p>
+                        <div class="mc-text-center"><a href="#sign_in" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+                    </div>
+                </div>
+            </div><!-- /content -->
+        </div><!-- /page -->
+        <div data-role="page" id="begin-password-reset">
+            <div data-role="header" data-theme="a">
+                <h1>Book It</h1>
+            </div><!-- /header -->
+            <div role="main" class="ui-content">
+                <h3>Password Reset</h3>
+                <label for="user_email">Enter your email address</label>
+                <input type="text" name="txt_email" id="user_email" value="">
+                <a href="#dlg-pwd-reset-sent" data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit-reset" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Submit</a>
+                <div data-role="popup" id="dlg-pwd-reset-sent" data-dismissible="false" style="max-width:400px;">
+                    <div data-role="header">
+                        <h1>Password Reset</h1>
+                    </div>
+                    <div role="main" class="ui-content">
+                        <h3>Check Your Inbox</h3>
+                        <!--                    <p>We sent you an email with instructions on how to reset your password. Please check your inbox and follow the instructions in the email.</p>-->
+                        <p>We sent you an email with password. Please check your inbox.</p>
+                        <!--<div class="mc-text-center"><a href="end-password-reset.html" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>-->
+                        <div class="mc-text-center"><a href="#sign_in" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+                    </div>
+                </div>
+            </div><!-- /content -->
+        </div><!-- /page -->
+        <div data-role="page" id="authentication_page">
+            <div data-role="header" data-theme="a">
+                <h1>Authenticate</h1>
+            </div><!-- /header -->
+            <div role="main" class="ui-content">
+                <h3>Authenticate</h3>
+                <label for="user_email">Email</label>
+                <input type="email" name="auth_user_email" id="auth_user_email" value="">
+                <label for="txt_authcode">Email Authentication Code</label>
+                <input type="number" name="authcode" id="authcode" value="">
+                <a href="javascript:;" data-transition="pop" data-position-to="window" id="btn_authenticate" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Submit</a>
+                <h3>Email Authentication</h3>
+                <p>We sent you an email with authentication code. Please enter that code above to activate your account.</p>
+
+            </div><!-- /content -->
+        </div><!-- /page -->
+        <script type="text/javascript" src="cordova.js"></script>        
+
+        <script type="text/javascript" src="js/login.js"></script>
+
+    </body>
+
+</html>
